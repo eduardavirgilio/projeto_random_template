@@ -19,6 +19,14 @@ def pagina_sobre():
     return render_template("sobre.html", cor_fundo_html = cor_fundo)
 
 
+lista_imagens = ["taylor_ttpd.jpg", "taylor_swift.png"]
+lista_letras = ["'E quando eu senti como se eu fosse um cardigã velho, debaixo da cama de alguém, você me vestiu e disse que eu era seu favorito' (Cardigan)", "'Todas as minhas manhãs são segundas-feiras' (Fortnight)"]
+
+@app.route("/")
+def pagina_inicial():
+    imagens = random.choice(imagens)
+    letras_musica = random.choice(letras_musica)
+    return render_template("home.html", imagens_html = imagens, letras_musica_html = letras_musica)
 
 #-----------------------------------------------------------------------------
 
