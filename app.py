@@ -10,15 +10,17 @@ app = Flask(__name__)
 
 #-----------------------------------------------------------------------------
 
-@app.route("/")
-def pagina_principal():
-    return  """
-            <H1>bosta seca</H1>
-            <BR>
-            <H2>eu adorei o flask</H2>
-            """
+
+lista_cores = ["lavanderblush", "pink", "papayawhip", "snow", "powderblue", "#BABACA", "#e1c8fd"]
+
+@app.route("/sobre")
+def pagina_sobre():
+    cor_fundo = random.choice(lista_cores)
+    return render_template("sobre.html", cor_fundo_html = cor_fundo)
+
+
 
 #-----------------------------------------------------------------------------
 
 #rodar o site
-app.run(debug=True, host="0.0.0.0", port="8080")
+app.run(debug=True)
