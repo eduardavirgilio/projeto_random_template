@@ -39,6 +39,12 @@ def pagina_principal():
                            frase_aleatoria_html = frase_aleatoria, 
                            imagem_aleatoria_html = imagem_aleatoria)
 
+@app.route("/cadastro")
+
+def pagina_cadastro():
+    return render_template("cadastro.html",  frases = letras_musica)
+
+
 
 # lista_imagens_html = lista_imagens, 
 
