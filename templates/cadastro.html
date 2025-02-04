@@ -16,15 +16,6 @@
 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 15%;
-            margin-left: 30%;
-        }
-     </style>
 </head>
 <body>
     <!-- caixa de texto para o cadastro das frases -->
@@ -45,16 +36,17 @@
 
           <!-- cartao modelo onde sera exibido as frases -->
 
+          {% for frase in frases %}
+
           <div class="row">
             <div class="col s12 m5">
               <div class="card-panel grey darken-1">
-                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                <span class="white-text">{{frase}}
                 </span>
               </div>
             </div>
           </div>
-
+          {% endfor %}
 
         </form>
       </div>

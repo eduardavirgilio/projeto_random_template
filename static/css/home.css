@@ -1,26 +1,32 @@
 *{
     margin: 0; 
     padding: 0; 
-    box-sizing: border_box;
+    box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.cabecalho-site{
-    display: flex; 
+header{
     background-color: rgb(87, 86, 86);
     color: aliceblue;
+    display: flex;
 }
 
-.cabecalho-site h1{
-    padding-left: 50px;
+.lado-esquerdo-cabecalho{
+    width: 50%;
+}
+
+.lado-esquerdo-cabecalho h1{
     padding-top: 30px;
     font-size: 30px;
+    padding-left: 20px;
 }
 
 .lado-direito-cabecalho{
     padding: 37px; 
     display: flex; 
     width: 50%;
+    justify-content: right;
+    align-items: right;
 }
 
 .lado-direito-cabecalho span{
