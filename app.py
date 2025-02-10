@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 lista_cores = ["lavanderblush", "pink", "papayawhip", "snow", "powderblue", "#BABACA", "#e1c8fd"]
 
-lista_imagens = ["taylor_ttpd.jpg", "taylor-swift-ttpd-album-review.png", "taylor-lencol-ttpd.jpg", "clipe-fortnight.jpg", "taylor-malone.jpg", "taylor-shot-ttpd.jpg"]
+lista_imagens = ["taylor_ttpd.jpg", "taylor-swift-ttpd-album-review.png", "taylor-lencol-ttpd.jpg", "clipe-fortnight.jpg", "taylor-shot-ttpd.jpg", "taylor-01.jpg", "taylor-01.jpg","taylor-02.jpg", "taylor-03.jpg", "taylor-04.jpg", "taylor-05.jpg", "taylor-06.jpg", "taylor-07.jpg"]
 
 letras_musica = ["'E quando eu senti como se eu fosse um cardigã velho, debaixo da cama de alguém, você me vestiu e disse que eu era seu favorito' (Cardigan)", 
                  "'Todas as minhas manhãs são segundas-feiras' (Fortnight)", 

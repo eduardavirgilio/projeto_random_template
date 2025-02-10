@@ -6,6 +6,7 @@
 }
 
 header{
+    width: 100%;
     background-color: rgb(87, 86, 86);
     color: aliceblue;
     display: flex;
@@ -16,7 +17,7 @@ header{
 }
 
 .lado-esquerdo-cabecalho h1{
-    padding-top: 30px;
+    padding-top: 35px;
     font-size: 30px;
     padding-left: 20px;
 }
@@ -31,17 +32,56 @@ header{
 
 .lado-direito-cabecalho span{
     padding-right: 15px;
+    font-size: 20px;
+    display: flex;
+    padding-top: 5px;
 }
 
 .lado-direito-cabecalho form button{
     border: none;
     background-color: rgb(182, 182, 182);
-    height: 25px;
-    width: 100px;
+    height: 35px;
+    width: 120px;
     border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .lado-direito-cabecalho span a{
     text-decoration: none;
     color: aliceblue;
+}
+
+.corpo-site{
+    display: flex;
+    height: 100vh;
+}
+
+.imagens-lado-esq{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(207, 207, 207, 0.274);
+}
+
+.frases-lado-dir{
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.frase-aleatoria{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.imagem-aleatoria{
+    width: auto;
+    height: 500px;
+    display: flex;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 20px;
 }
