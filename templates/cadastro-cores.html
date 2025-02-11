@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de cores</title>
+
+    <!-- importando o frame working materialize -->
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <link rel="stylesheet" href="/static/css/cadastro.css">
+
+</head>
+<body>
+
+  <header>
+
+    <div class="lado-esquerdo-cabecalho">
+
+        <h1>Departamento dos poetas torturados</h1>
+
+    </div>
+
+    <div class="lado-direito-cabecalho">
+
+        <span><a href="./home.html">Home</a></span>
+        <span>Sobre</span>
+        <span>Novidades</span>
+
+        <form>
+            <button>Login</button>
+        </form>
+    </div>
+
+</header>
+
+    <!-- caixa de texto para o cadastro das frases -->
+
+    <div class="row">
+        <form class="col s12" action="/post/cadastrarcores" method="post">
+          <div class="row ">
+            <div class="input-field col s6">
+            <i class="material-icons prefix ">mode_edit</i>
+              <textarea name="cor" id="icon_prefix2" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Digite uma cor</label>
+            </div>
+            
+          <button class="btn waves-effect  grey darken-3" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i></button>
+
+          </div>
+
+          <!-- cartao modelo onde sera exibido as frases -->
+
+          {% for cor in cores %}
+
+          <div class="row">
+            <div class="col s12 m5">
+              <div class="card-panel" style="background-color: {{cor}};">
+                <span class="black-text">{{cor}}
+                </span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </form>
+      </div>
+
+</body>
+</html>

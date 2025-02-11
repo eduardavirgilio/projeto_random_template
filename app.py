@@ -50,6 +50,16 @@ def post_cadastrarfrase():
     letras_musica.append (frase_vinda_do_html)
     return redirect("/cadastro")
 
+@app.route("/cadastro-cores", methods = ["GET"])
+def pagina_cadastro_cores():
+    return render_template("cadastro-cores.html",  cores = lista_cores)
+
+@app.route("/post/cadastrarcores", methods = ["POST"])
+def post_cadastrarcores():
+    cor_vinda_do_html = request.form.get("cor")
+    lista_cores.append (cor_vinda_do_html)
+    return redirect("/cadastro-cores")
+
 # lista_imagens_html = lista_imagens, 
 
 #-----------------------------------------------------------------------------
