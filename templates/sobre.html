@@ -5,44 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamento dos poetas torturados</title>
+
+    <link rel="stylesheet" href="/static/css/sobre.css">
 </head>
 
-<body style="background-color:{{cor_fundo_html}}; margin: 0; padding: 0; box-sizing: border_box;">
+<body>
 
-    <header style="display: flex; background-color: white; ;">
-        <h1 style="padding-left: 50px;"> ★</h1>
+    <header>
 
-        <div style="padding: 37px; display: flex; gap: 20px; padding-left: 850px;">
+        <div class="lado-esquerdo-cabecalho">
 
-                <spam><a href="/templates/home.html" style="text-decoration: none; color: black; padding: 10px;">Home</a></spam>
-                <spam>Sobre</spam>
-                <spam>Novidades</spam>
+            <h1>Departamento dos poetas torturados</h1>
+
+        </div>
+
+        <div class="lado-direito-cabecalho">
+
+            <span><a href="./home.html">Home</a></span>
+            <span>Sobre</span>
+            <span>Novidades</span>
 
             <form>
                 <button>Login</button>
             </form>
         </div>
 
-
     </header>
 
-    <main>
-        <h2>TTPD</h2>
+    <main class="corpo-site">
 
-        <p>Departamento dos poetas torturados é o site perfeito para os fãs da cantora que querem reviver os momentos mais marcantes das suas músicas. Aqui, você encontra os melhores trechos das canções de Taylor, aquelas frases que ficam na cabeça e tocam o coração, seja em suas baladas apaixonadas, hinos de superação ou declarações de amor à sua forma única de viver.
+        <div class="descricao-site">
+        <p><strong>O Departamento dos poetas torturados</strong> é o site perfeito para os fãs da cantora que querem reviver os momentos mais marcantes das suas músicas. Aqui, você encontra os melhores trechos das canções de Taylor, aquelas frases que ficam na cabeça e tocam o coração, seja em suas baladas apaixonadas, hinos de superação ou declarações de amor à sua forma única de viver.
 
             Com uma seleção cuidadosamente curada, o site traz os versos mais icônicos de cada fase da carreira de Taylor Swift, desde os primeiros sucessos como "Love Story" e "You Belong With Me", até as letras mais profundas de álbuns como Red, 1989, Folklore e Midnights. Cada trecho é uma cápsula de emoção, narrativa e estilo único, que revela um pouco mais sobre o mundo de Taylor, sua visão de vida e sua habilidade de transformar sentimentos em poesia.
             
             Além de curtir os trechos mais marcantes, você também pode compartilhar suas músicas favoritas com outros fãs e descobrir novos significados por trás de cada letra. Seja para cantar junto ou refletir sobre as experiências que as músicas evocam, Trechos de Taylor Swift é o lugar ideal para quem quer se perder nas palavras da artista.</p>
+        </div>
 
-        <img style="width: 500px; border-radius: 9000px;" src="/static/img/taylor_swift.png" alt="taylor swift">
+        <div class="container-img-dir" style="background-color: {{cor_fundo_html}};">
+        <img class="imagem-esq" src="/static/img/taylor-07.jpg" alt="taylor swift">
+        </div>
     </main>
 
-    <footer>
-        <h3>Popstars</h3>
-
-
-    </footer>
 </body>
 
 </html>

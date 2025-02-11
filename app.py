@@ -3,7 +3,7 @@ import random
 #coisas basicas que sempre tem que ter no codigo
 
 #importando uma parte do flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 #criando a variavel e instanciando
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def pagina_sobre():
     cor_fundo = random.choice(lista_cores)
     return render_template("sobre.html", cor_fundo_html = cor_fundo)
 
-@app.route("/home")
+@app.route("/home", methods = ["GET"])
 
 def pagina_principal():
     imagem_aleatoria = random.choice(lista_imagens)
@@ -39,12 +39,16 @@ def pagina_principal():
                            frase_aleatoria_html = frase_aleatoria, 
                            imagem_aleatoria_html = imagem_aleatoria)
 
-@app.route("/cadastro")
+@app.route("/cadastro", methods = ["GET"])
 
 def pagina_cadastro():
     return render_template("cadastro.html",  frases = letras_musica)
 
-
+@app.route("/post/cadastrarfrase", methods = ["POST"])
+def post_cadastrarfrase():
+    frase_vinda_do_html = request.form.get("frase")
+    letras_musica.append (frase_vinda_do_html)
+    return "Cadastrado com sucesso!"
 
 # lista_imagens_html = lista_imagens, 
 

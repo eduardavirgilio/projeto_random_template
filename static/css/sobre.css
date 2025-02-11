@@ -1,0 +1,85 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.corpo-site{
+    display: flex;
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(87, 86, 86);
+    color: aliceblue;
+    display: flex;
+}
+
+.lado-esquerdo-cabecalho{
+    width: 50%;
+}
+
+.lado-esquerdo-cabecalho h1{
+    padding-top: 35px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.lado-direito-cabecalho{
+    padding: 37px; 
+    display: flex; 
+    width: 50%;
+    justify-content: right;
+    align-items: right;
+}
+
+.lado-direito-cabecalho span{
+    padding-right: 15px;
+    font-size: 20px;
+    display: flex;
+    padding-top: 5px;
+}
+
+.lado-direito-cabecalho form button{
+    border: none;
+    background-color: rgb(182, 182, 182);
+    height: 35px;
+    width: 120px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lado-direito-cabecalho span a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.descricao-site{
+    font-size: 23px;
+    padding: 40px;
+    text-align: center;
+    padding-top: 60px;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    text-align: justify;
+}
+
+.imagem-esq{
+    width: auto;
+    height: 500px;
+    display: flex;
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: 8%;
+    border-radius: 20px;
+}
+
+.container-img-dir{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(207, 207, 207, 0.274);
+}

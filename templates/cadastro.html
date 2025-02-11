@@ -16,16 +16,40 @@
 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+     <link rel="stylesheet" href="/static/css/cadastro.css">
+
 </head>
 <body>
+
+  <header>
+
+    <div class="lado-esquerdo-cabecalho">
+
+        <h1>Departamento dos poetas torturados</h1>
+
+    </div>
+
+    <div class="lado-direito-cabecalho">
+
+        <span><a href="./home.html">Home</a></span>
+        <span>Sobre</span>
+        <span>Novidades</span>
+
+        <form>
+            <button>Login</button>
+        </form>
+    </div>
+
+</header>
+
     <!-- caixa de texto para o cadastro das frases -->
 
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" action="/post/cadastrarfrase" method="post">
           <div class="row ">
             <div class="input-field col s6">
             <i class="material-icons prefix ">mode_edit</i>
-              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <textarea name="frase" id="icon_prefix2" class="materialize-textarea"></textarea>
               <label for="icon_prefix2">Digite uma letra de música da taylor swift (e a qual musica ela pertence)</label>
             </div>
             
