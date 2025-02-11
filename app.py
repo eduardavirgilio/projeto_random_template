@@ -3,7 +3,7 @@ import random
 #coisas basicas que sempre tem que ter no codigo
 
 #importando uma parte do flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 #criando a variavel e instanciando
 app = Flask(__name__)
@@ -48,7 +48,7 @@ def pagina_cadastro():
 def post_cadastrarfrase():
     frase_vinda_do_html = request.form.get("frase")
     letras_musica.append (frase_vinda_do_html)
-    return "Cadastrado com sucesso!"
+    return redirect("/cadastro")
 
 # lista_imagens_html = lista_imagens, 
 
