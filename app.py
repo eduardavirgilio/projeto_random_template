@@ -1,5 +1,7 @@
 import random
 
+from .data import listas_configuracao as listas
+
 #coisas basicas que sempre tem que ter no codigo
 
 #importando uma parte do flask
@@ -11,29 +13,18 @@ app = Flask(__name__)
 #-----------------------------------------------------------------------------
 
 
-lista_cores = ["lavanderblush", "pink", "papayawhip", "snow", "powderblue", "#BABACA", "#e1c8fd"]
-
-lista_imagens = ["taylor_ttpd.jpg", "taylor-swift-ttpd-album-review.png", "taylor-lencol-ttpd.jpg", "clipe-fortnight.jpg", "taylor-shot-ttpd.jpg", "taylor-01.jpg", "taylor-01.jpg","taylor-02.jpg", "taylor-03.jpg", "taylor-04.jpg", "taylor-05.jpg", "taylor-06.jpg", "taylor-07.jpg"]
-
-letras_musica = ["'E quando eu senti como se eu fosse um cardigã velho, debaixo da cama de alguém, você me vestiu e disse que eu era seu favorito' (Cardigan)", 
-                 "'Todas as minhas manhãs são segundas-feiras' (Fortnight)", 
-                 "'Você sabe, os melhores filmes de todos os tempos nunca foram feitos' (The 1)", 
-                 "'Eu olho direto para o Sol, mas nunca para o espelho.' (Anti-Hero)", 
-                 "'Você não sabe o que tem até que tenha perdido' (You're losing me)", 
-                 "'Eu estou tão cansada de correr o mais rápido que consigo, imaginando se eu chegaria lá mais rápido se eu fosse um homem' (The man)", 
-                 "'E se você nunca sangrar, você nunca vai crescer' (The 1)"]
 
 @app.route("/sobre")
 def pagina_sobre():
-    cor_fundo = random.choice(lista_cores)
+    cor_fundo = random.choice(listas.lista_cores)
     return render_template("sobre.html", cor_fundo_html = cor_fundo)
 
 @app.route("/home", methods = ["GET"])
 
 def pagina_principal():
-    imagem_aleatoria = random.choice(lista_imagens)
+    imagem_aleatoria = random.choice(listas.lista_imagens)
 
-    frase_aleatoria = random.choice(letras_musica)
+    frase_aleatoria = random.choice(listas.letras_musica)
 
     return render_template("home.html", 
                            frase_aleatoria_html = frase_aleatoria, 
@@ -42,12 +33,12 @@ def pagina_principal():
 @app.route("/cadastro", methods = ["GET"])
 
 def pagina_cadastro():
-    return render_template("cadastro.html",  frases = letras_musica)
+    return render_template("cadastro.html",  frases = listas.letras_musica)
 
 @app.route("/post/cadastrarfrase", methods = ["POST"])
 def post_cadastrarfrase():
     frase_vinda_do_html = request.form.get("frase")
-    letras_musica.append (frase_vinda_do_html)
+    listas.letras_musica.append (frase_vinda_do_html)
     return redirect("/cadastro")
 
 @app.route("/cadastro-frases/delete/<indice_frase>", methods = ["GET"])
@@ -57,19 +48,20 @@ def delete_frases(indice_frase):
     indice_frase = int(indice_frase)
 
     #exclui a cor da lista atraves do indice
-    letras_musica.pop(indice_frase)
+    listas.letras_musica.pop(indice_frase)
 
     #redireciona para a rota cadastro frases
     return redirect("/cadastro")
 
 @app.route("/cadastro-cores", methods = ["GET"])
 def pagina_cadastro_cores():
-    return render_template("cadastro-cores.html",  cores = lista_cores)
+    return render_template("cadastro-cores.html",  cores = listas.
+                           lista_cores)
 
 @app.route("/post/cadastrarcores", methods = ["POST"])
 def post_cadastrarcores():
     cor_vinda_do_html = request.form.get("cor")
-    lista_cores.append (cor_vinda_do_html)
+    listas.lista_cores.append (cor_vinda_do_html)
     return redirect("/cadastro-cores")
 
 @app.route("/cadastro-cores/delete/<indice_cor>", methods = ["GET"])
@@ -79,7 +71,7 @@ def delete_cores(indice_cor):
     indice_cor = int(indice_cor)
 
     #exclui a cor da lista atraves do indice
-    lista_cores.pop(indice_cor)
+    listas.lista_cores.pop(indice_cor)
 
     #redireciona para a rota cadastro cores
     return redirect("/cadastro-cores")
