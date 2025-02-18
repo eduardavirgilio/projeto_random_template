@@ -50,6 +50,18 @@ def post_cadastrarfrase():
     letras_musica.append (frase_vinda_do_html)
     return redirect("/cadastro")
 
+@app.route("/cadastro-frases/delete/<indice_frase>", methods = ["GET"])
+def delete_frases(indice_frase):
+
+    #converte o indice para inteiro pois ele vem como string
+    indice_frase = int(indice_frase)
+
+    #exclui a cor da lista atraves do indice
+    letras_musica.pop(indice_frase)
+
+    #redireciona para a rota cadastro frases
+    return redirect("/cadastro")
+
 @app.route("/cadastro-cores", methods = ["GET"])
 def pagina_cadastro_cores():
     return render_template("cadastro-cores.html",  cores = lista_cores)
@@ -60,7 +72,17 @@ def post_cadastrarcores():
     lista_cores.append (cor_vinda_do_html)
     return redirect("/cadastro-cores")
 
+@app.route("/cadastro-cores/delete/<indice_cor>", methods = ["GET"])
+def delete_cores(indice_cor):
 
+    #converte o indice para inteiro pois ele vem como string
+    indice_cor = int(indice_cor)
+
+    #exclui a cor da lista atraves do indice
+    lista_cores.pop(indice_cor)
+
+    #redireciona para a rota cadastro cores
+    return redirect("/cadastro-cores")
 
 # lista_imagens_html = lista_imagens, 
 
