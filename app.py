@@ -1,6 +1,8 @@
 import random
 
-from .data import listas_configuracao as listas
+from data import listas_configuracao as listas
+
+import mysql.connector
 
 #coisas basicas que sempre tem que ter no codigo
 
