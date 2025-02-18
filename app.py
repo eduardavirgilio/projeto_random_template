@@ -60,9 +60,14 @@ def post_cadastrarcores():
     lista_cores.append (cor_vinda_do_html)
     return redirect("/cadastro-cores")
 
+
+
 # lista_imagens_html = lista_imagens, 
 
 #-----------------------------------------------------------------------------
+
+#post - enviar uma informação 
+#get pegar uma informação
 
 #rodar o site
 app.run(debug=True)

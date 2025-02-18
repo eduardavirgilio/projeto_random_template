@@ -18,6 +18,8 @@
 
      <link rel="stylesheet" href="/static/css/cadastro.css">
 
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+
 </head>
 <body>
 
@@ -45,6 +47,7 @@
     <!-- caixa de texto para o cadastro das frases -->
 
     <div class="row">
+      <!-- o form action manda pro python -->
         <form class="col s12" action="/post/cadastrarcores" method="post">
           <div class="row ">
             <div class="input-field col s6">
@@ -67,6 +70,11 @@
               <div class="card-panel" style="background-color: {{cor}};">
                 <span class="black-text">{{cor}}
                 </span>
+                <a href="" style="display: flex; justify-content: end;">
+                  <span class="material-symbols-outlined">
+                    delete
+                  </span>
+                </a>
               </div>
             </div>
           </div>
